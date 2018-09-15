@@ -14,11 +14,13 @@ int main(){
   long long ans=(long long)0;
   for (long long i=1;i<=N;i++){
     long long tmp = X*N+i*X+xsum[N-1]*(long long)5;
+    int flag = 0;
     for (long long j=N-1-i*2; j>-1; j-=i){
       tmp += xsum[j]*(long long)2;
+      if (tmp<0) flag++;
     }
     if (ans == 0) ans = tmp;
-    else ans = min(ans, tmp);
+    else if (flag==0) ans = min(ans, tmp);
   }
   cout << ans << endl;
 }
