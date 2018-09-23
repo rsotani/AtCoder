@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// 嘘解法 !!!!
+
 int main(){
   string S, T;
   cin >> S >> T;
