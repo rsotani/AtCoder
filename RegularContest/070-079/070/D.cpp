@@ -14,20 +14,23 @@ int main(){
     cout << 0 << endl;
     return 0;
   }
-  vector<int> Ks(K,0);
-  Ks[0] = 1;
-  for (long long k: a){
-    for (int i=0; i<K; i++){
-      if ((Ks[i] == 1) && (i+k<K)) Ks[i+k] = 1;
-    }
+  sort(a.begin(), a.end());
+  long long check = a[a.size()-1];
+  vector<long long> clst;
+  for (int i=0; i<(int)a.size(); i++){
+    check += a[i];
+    clst.push_back(a[i]);
+    if (check >= K) break;
+  }
+  if (check < K){
+    cout << a.size() << endl;
+    return 0;
   }
   int ans = 0;
-  for (long long k: a){
-    bool flag = true;
-    for (int i=K-1; i>K-k-1; i--){
-      if (Ks[i]==1) flag = false;
-    }
-    if (flag) ans++;
+  for (int i=0; i<(int)clst.size(); i++){
+    check -= clst[i];
+    if ((check >= K)) ans++;
+    else break;
   }
   cout << ans << endl;
 }
