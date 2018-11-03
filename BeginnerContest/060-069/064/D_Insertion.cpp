@@ -6,7 +6,23 @@ int main(){
   cin >> N;
   string S;
   cin >> S;
+  int R = 0;
+  int L = 0;
+  for (int i=0; i<N; i++){
+    if (S[i]=='('){
+      L++;
+    } else {
+      if (L>0){
+        L--;
+      }
+      else {
+        R++;
+      }
+    }
+  }
   string ans = "";
-  int rcount = 0;
-  for (int i=N-1; i>0; i--){
+  for (int i=0; i<R; i++) ans += '(';
+  ans += S;
+  for (int i=0; i<L; i++) ans += ')';
+  cout << ans << endl;
 }
