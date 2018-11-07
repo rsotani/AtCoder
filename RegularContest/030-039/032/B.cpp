@@ -47,9 +47,9 @@ int main(){
     cin >> a >> b;
     unite(a, b);
   }
-  set<int> ans;
+  int ans=0;
   for (int i=1; i<=N; i++){
-    ans.insert(par[i]);
+    if (i==par[i]) ans++;
   }
-  cout << ans.size()-1 << endl;
+  cout << ans-1 << endl;
 }
