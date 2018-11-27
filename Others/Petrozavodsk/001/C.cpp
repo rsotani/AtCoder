@@ -24,13 +24,13 @@ int main(){
       return 0;
     }
     if (abs(check-befnum)%2==0){
-      if (res==befres){
+      if ((res==befres&&check>befnum)||(res!=befres&&check<befnum)){
         l = check;
       } else {
         u = check;
       }
     } else {
-      if (res==befres){
+      if ((res==befres&&check>befnum)||(res!=befres&&check<befnum)){
         u = check;
       } else {
         l = check;
