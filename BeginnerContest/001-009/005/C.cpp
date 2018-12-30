@@ -11,7 +11,7 @@ int main(){
   vector<int> B(M);
   for (int i=0; i<M; i++) cin >> B[i];
   int a=0, b=0;
-  while(a<N){
+  while(a<N&&b<M){
     if (A[a]>B[b]){
       cout << "no" << endl;
       return 0;

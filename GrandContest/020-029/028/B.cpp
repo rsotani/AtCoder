@@ -35,8 +35,8 @@ int main(){
   for (int i=1; i<=N; i++) Psum[i] = (Psum[i-1]+inv[i])%md;
   for (int i=1; i<=N; i++){
     ans += A[i]*(Psum[i]+Psum[N-i+1]+md-1)%md;
+    ans %=md;
   }
-  ans *= fac[N];
-  ans %= md;
+  ans = (ans*fac[N])%md;
   cout << ans << endl;
 }

@@ -26,7 +26,7 @@ int main(){
   if (dis<5*3) W=0;
   else if (dis<31*3) W=1;
   else if (dis<67*3) W=2;
-  else if (dis<99*3) W=3;
+  else if (dis<109*3) W=3;
   else if (dis<159*3) W=4;
   else if (dis<215*3) W=5;
   else if (dis<277*3) W=6;

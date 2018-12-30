@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const static int MAX_N = 300030;
+const int MAX_N = 300030;
 int parK[MAX_N];
 int rnkK[MAX_N];
 int parL[MAX_N];
